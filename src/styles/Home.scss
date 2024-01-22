@@ -1,0 +1,106 @@
+@use "./global.scss" as *;
+section.home {
+  background: black;
+  color: rgb(205, 205, 205);
+  z-index: -1;
+  position: sticky;
+  top: 4rem;
+
+  .home-container {
+    .home-text {
+      p {
+        font-family: "Open-sans-light";
+        font-size: $home-para;
+        line-height: 1em;
+        color: white;
+        // display: inline;
+        span {
+          font-family: "Open-sans-extrabold";
+          font-size: $home-heading;
+          line-height: 0.8;
+          color: rgb(255, 119, 1);
+          letter-spacing: 2px;
+          // display: block;
+          &.designed {
+            display: inline-block;
+          }
+          &.delivered {
+            display: block; //for delivered text on next line
+            letter-spacing: -5.5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  // for mobile
+  section.home {
+    top: 2rem;
+    .home-container {
+      .home-text {
+        margin: 4rem 0 2rem 0;
+        p {
+          font-size: calc($home-para * 0.25);
+
+          span {
+            font-size: calc($home-heading * 0.25);
+            &.designed {
+              letter-spacing: -2px;
+            }
+            &.delivered {
+              letter-spacing: -3.6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* Styles for tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+  section.home {
+    margin-bottom: 1rem; //project was overlapping delivered text
+
+    .home-container {
+      .home-text {
+        p {
+          font-size: calc($home-para * 0.5);
+          span {
+            font-size: calc($home-heading * 0.5);
+            line-height: 1;
+            letter-spacing: -2px;
+
+            &.delivered {
+              letter-spacing: -5.5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  section.home {
+    margin-bottom: 1rem; //project was overlapping delivered text
+
+    .home-container {
+      .home-text {
+        p {
+          font-size: calc($home-para * 0.7);
+          span {
+            font-size: calc($home-heading * 0.7);
+            line-height: 1;
+            letter-spacing: -2px;
+
+            &.delivered {
+              letter-spacing: -5.5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.show {
+  visibility: visible;
+}
+.hidden {
+  transition: 0.2s;
+  visibility: hidden;
+}
+.slideLeft {
+  animation: slideToLeft 1s;
+}
+
+@keyframes slideToLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

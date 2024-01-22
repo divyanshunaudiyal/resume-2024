@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Open-sans";
+  src: url("../assets/Open_Sans/static/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Open-sans-bold";
+  src: url("../assets/Open_Sans/static/OpenSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Open-sans-extrabold";
+  src: url("../assets/Open_Sans/static/OpenSans-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Open-sans-light";
+  src: url("../assets/Open_Sans/static/OpenSans-Light.ttf");
+}
+
+section {
+  overflow: hidden;
+}
+
+$color-project1-grad1: #fbdb89;
+$color-project1-grad2: #f79e98;
+$text-orange: rgb(255, 119, 1);
+$home-para: 67px;
+$home-heading: 259.7973448275862px;
+
+body {
+  background: black;
+  font-family: "Open-sans";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+}

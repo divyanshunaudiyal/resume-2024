@@ -1,0 +1,355 @@
+@use "./global.scss" as *;
+section.enquire {
+  .enquire-container {
+    position: sticky;
+    bottom: 0;
+    background: rgb(0, 0, 2);
+    color: wheat;
+
+    form {
+      width: 90%;
+      height: 100%;
+      margin: 0 auto;
+
+      .form-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 0.25rem;
+        grid-template-areas:
+          "fullname email"
+          "number budget"
+          "message message"
+          "whatsapp whatsapp";
+
+        .fullname {
+          grid-area: fullname;
+        }
+        .email-id {
+          grid-area: email;
+        }
+        .phone-number {
+          grid-area: number;
+        }
+        .budget {
+          grid-area: budget;
+        }
+        .msg {
+          grid-area: message;
+        }
+        .whatsapp {
+          grid-area: whatsapp;
+        }
+      }
+    }
+    form label {
+      display: block;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      font-size: 16px;
+
+      h2 {
+        text-transform: capitalize;
+        color: wheat;
+        text-transform: uppercase;
+        font-family: "Open-sans-bold";
+        font-size: 20px;
+      }
+    }
+    label input {
+      border: unset;
+      text-transform: uppercase;
+      font-family: "Open-sans";
+      letter-spacing: 2px;
+      line-height: 0.8em;
+      width: 80%;
+      background: transparent;
+      color: rgb(99, 99, 99);
+
+      border: none;
+      border-bottom: 1px solid;
+    }
+    label input:focus {
+      outline: none;
+      color: $text-orange;
+    }
+    label textarea {
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      line-height: 1.8rem;
+      width: 90%;
+      box-sizing: border-box;
+      background: transparent;
+      color: #444444;
+      //   font-size: 14px;
+      //   padding: 1rem 2.5rem;
+      border: none;
+      border-bottom: 0.5px solid rgb(107, 107, 107);
+      // border-bottom-color: rgba(12, 12, 12, 0.3);
+      //   border-radius: 1rem;
+      resize: none;
+      &:focus {
+        outline: none;
+        color: $text-orange;
+        // border-bottom: 1px orange;
+      }
+    }
+    label select {
+      //   padding: 1rem;
+      background: transparent;
+      color: #ececec;
+      border: none;
+      border-bottom: 1px solid;
+      text-transform: uppercase;
+      //   letter-spacing: 5px;
+      line-height: 1.8em;
+      background: transparent;
+      color: #ababab;
+
+      border: none;
+      border-bottom: 1px solid;
+      &:focus {
+        outline: none;
+        // color: $text-orange;
+      }
+
+      option {
+        background: transparent;
+      }
+    }
+    #whatsapp-btn {
+      box-sizing: border-box;
+      //   border-radius: 15px;
+      padding: 1rem;
+      //   border: 1px solid white;
+      background: wheat;
+      color: black;
+      //   font-family: "Poppins";
+      text-transform: uppercase;
+      //   font-size: 14px;
+      width: 90%;
+    }
+    #whatsapp-btn:hover {
+      background: $text-orange;
+      transition: 1s;
+      //   color: white;
+    }
+    .text {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      h1 {
+        margin: 0;
+        font-family: "Open-sans-extrabold";
+        font-size: 100px;
+        color: $text-orange;
+        line-height: 1.8;
+      }
+      p {
+        font-size: 29px;
+        width: 40%;
+
+        span {
+          a {
+            text-decoration: none;
+            color: $text-orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section.enquire {
+    .enquire-container {
+      form {
+        margin: 0 auto;
+        .form-container {
+          gap: 0rem;
+          grid-template-areas:
+            "fullname email"
+            "number budget"
+            "message message"
+            "whatsapp whatsapp";
+
+          .fullname {
+            grid-area: fullname;
+          }
+          .email-id {
+            grid-area: email;
+          }
+          .phone-number {
+            grid-area: number;
+          }
+          .budget {
+            grid-area: budget;
+          }
+          .msg {
+            grid-area: message;
+          }
+          .whatsapp {
+            grid-area: whatsapp;
+          }
+        }
+      }
+      form label {
+        display: block;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        font-size: 16px;
+
+        h2 {
+          text-transform: capitalize;
+          color: wheat;
+          text-transform: uppercase;
+          font-family: "Open-sans-bold";
+          font-size: 16px;
+        }
+      }
+      label input {
+        letter-spacing: 0px;
+        font-size: 12px;
+      }
+      label input:focus {
+        outline: none;
+        color: $text-orange;
+      }
+      label textarea {
+        font-size: 12px;
+        letter-spacing: 2px;
+        line-height: 1.4rem;
+      }
+      label select {
+        color: #7c7b7b;
+        font-size: 12px;
+
+        option {
+          background: transparent;
+        }
+      }
+      #whatsapp-btn {
+        padding: 0.5rem;
+      }
+      .text {
+        margin: 2rem 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around !important;
+        h1 {
+          margin: 0;
+          font-family: "Open-sans-extrabold";
+          font-size: 44px;
+          color: $text-orange;
+          line-height: 1;
+        }
+        p {
+          font-size: 12px;
+          width: initial;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  section.enquire {
+    .enquire-container {
+      form {
+        .form-container {
+          gap: 1rem;
+        }
+      }
+      form label {
+        h2 {
+          text-transform: capitalize;
+          color: wheat;
+          text-transform: uppercase;
+          font-family: "Open-sans-bold";
+          font-size: 20px;
+        }
+      }
+      label input {
+        font-size: 14px;
+      }
+      label textarea {
+        font-size: 14px;
+        letter-spacing: 2px;
+        line-height: 1.5rem;
+      }
+      label select {
+        color: #7c7b7b;
+        font-size: 14px;
+      }
+
+      .text {
+        margin: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around !important;
+        h1 {
+          margin: 0;
+          font-family: "Open-sans-extrabold";
+          font-size: 60px;
+          color: $text-orange;
+          line-height: 1.5;
+        }
+        p {
+          font-size: 16px;
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1100px) {
+  section.enquire {
+    .enquire-container {
+      form {
+        .form-container {
+          gap: 1.5rem;
+        }
+      }
+      form label {
+        h2 {
+          font-size: 24px;
+        }
+      }
+      label input {
+        font-size: 14px;
+      }
+      label textarea {
+        font-size: 16px;
+        letter-spacing: 2px;
+        line-height: 1.5rem;
+      }
+      label select {
+        color: #7c7b7b;
+        font-size: 16px;
+      }
+
+      .text {
+        // margin: 2rem 0;
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-around !important;
+        h1 {
+          // margin: 0;
+          // font-family: "Open-sans-extrabold";
+          font-size: 90px;
+          // color: $text-orange;
+          // line-height: 1.5;
+        }
+        p {
+          font-size: 24px;
+          width: 40%;
+        }
+      }
+    }
+  }
+}

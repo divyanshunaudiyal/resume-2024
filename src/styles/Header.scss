@@ -1,0 +1,189 @@
+@use "./global.scss" as *;
+
+header {
+  .header {
+    // font-family: "Open-sans-bold";
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    //header fixed
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; // width to full viewport
+    background: black;
+    color: white;
+    height: 4rem;
+    z-index: 1; //header overlaps every element
+    h1,
+    h2 {
+      //default margin,padding 0
+      margin: 0;
+      padding: 0;
+    }
+    &_left {
+      h2 {
+        font-family: "Open-sans-light";
+        color: rgb(105, 105, 105);
+        text-transform: uppercase;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+
+        span {
+          color: greenyellow;
+          position: relative;
+          // animation: sizeChange 1s alternate infinite;
+
+          &::after {
+            content: "";
+            position: absolute;
+            background: white;
+            height: 10px;
+            top: 2px;
+            left: 1px;
+            width: 10px;
+            border-radius: 50%;
+            animation: availableDot 2s infinite;
+          }
+        }
+        // &::before {
+        //   content: "🟢 "; //add green dot before available text
+        // }
+      }
+    }
+    &_center {
+      h1 {
+        font-family: "Mynerve", cursive;
+        text-transform: capitalize;
+        font-size: 24px;
+        span {
+          color: $text-orange;
+        }
+      }
+    }
+    nav {
+      display: flex;
+
+      a {
+        font-size: 14px;
+        padding: 1rem 1.5rem;
+        // border-radius: 0.5rem;
+        color: wheat;
+        background: transparent;
+        border: none;
+        position: relative;
+        font-family: "Mynerve", cursive;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 10px;
+          left: 25%;
+          height: 1px;
+          background: rgb(249, 131, 89);
+          width: 0;
+          z-index: 1;
+          transition: width 0.3s; // Add a transition for a smooth effect
+        }
+
+        &:hover::before {
+          bottom: 10px;
+          left: 25%;
+          width: 50%;
+        }
+      }
+      .toggle-menu {
+        button {
+          background: transparent;
+          border: none;
+          color: rgb(251, 105, 0);
+          cursor: pointer;
+        }
+        ul {
+          padding: 0;
+          margin: 0;
+          position: absolute;
+          width: 50vw;
+          height: 100vh;
+          right: 0;
+          background: black;
+          list-style-type: none;
+
+          li {
+            margin-top: 2rem;
+            a {
+              font-family: "Open-sans" !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  header {
+    .header {
+      // display: block;
+      height: 3rem;
+      justify-content: space-evenly; //space between name and menu button
+
+      &_left {
+        h2 {
+          font-size: 8px;
+          span {
+            &::after {
+              height: 6px;
+              width: 6px;
+              // left: 0.75px;
+              top: 1.25px;
+            }
+          }
+        }
+      }
+      nav {
+        .contact-link,
+        .projects-link {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 901px) {
+  header {
+    .header {
+      justify-content: space-evenly;
+      nav {
+        .contact-link,
+        .projects-link {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 900px) {
+  header {
+    nav {
+      .toggle-menu {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes availableDot {
+  0% {
+    opacity: 0;
+    background: greenyellow;
+  }
+  50% {
+    opacity: 1;
+    background: greenyellow;
+  }
+  100% {
+    opacity: 0;
+  }
+}
