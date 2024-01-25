@@ -27,13 +27,14 @@ footer {
     }
     .social {
       display: flex;
-      gap: 0.5rem;
+      gap: 1rem;
 
       a {
         text-decoration: none;
+        transition: 1s;
 
         &:hover {
-          transform: scale(1.5);
+          transform: scale(2);
         }
       }
       .github {
@@ -55,6 +56,17 @@ footer {
 
     &::after {
       top: -5px;
+    }
+
+    .footer-container {
+      .social {
+        gap: 0.5rem;
+        a {
+          &:hover {
+            transform: scale(1.5);
+          }
+        }
+      }
     }
   }
 }

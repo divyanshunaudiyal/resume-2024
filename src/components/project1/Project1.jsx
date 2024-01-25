@@ -11,13 +11,16 @@ function Project1() {
               forkify<span>Web Application</span>
             </h1>
             <p>
-              Get your recipe is an online platform created using HTML,SASS and
-              JS
+              Welcome to our Recipe Explorer! 🧑‍🍳🔍 This project seamlessly
+              connects you with a world of delicious possibilities. Fetching
+              data from APIs, it empowers you to search and discover a diverse
+              range of recipes. Elevate your culinary journey with the ease of a
+              click.
             </p>
-            <p>
+            {/* <p>
               It was created by me for users to search for recipe of their
               favourite foods,where data is fetched from an API
-            </p>
+            </p> */}
             <p>
               <span>HTML</span>
               <span>SASS</span>

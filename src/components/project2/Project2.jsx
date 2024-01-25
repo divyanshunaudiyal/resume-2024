@@ -43,13 +43,16 @@ function Project2() {
               Rent a car<span>Web Application</span>
             </h1>
             <p>
-              Get your recipe is an online platform created using HTML,SASS and
-              JS
+              The Car Application is a React.js project with Sass styling,
+              featuring a list of hardcoded cars. It demonstrates fundamental
+              React concepts, including state management and component-based
+              design. The styling, organized with Sass, ensures a modular
+              approach to design.
             </p>
-            <p>
+            {/* <p>
               It was created by me for users to search for recipe of their
               favourite foods,where data is fetched from an API
-            </p>
+            </p> */}
             <p>
               <span>React</span>
               <span>SASS</span>

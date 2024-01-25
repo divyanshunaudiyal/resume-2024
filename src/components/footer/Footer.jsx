@@ -21,7 +21,11 @@ function Footer() {
           >
             <FaLinkedin />
           </a>
-          <a className="instagram" href="">
+          <a
+            className="instagram"
+            href="https://www.instagram.com/divyanshunaudiyal/"
+            target="blank"
+          >
             <FaInstagram />
           </a>
         </div>
